@@ -20,7 +20,7 @@ public class TesterRunigram {
             }
         }
         
-        if (testName.equals("horizontal")) {
+         if (testName.equals("horizontal")) {
             // Testing Runigram.flippedHorizontally
             System.out.println("Testing Runigram.flippedHorizontally...");
             if (testFlipHorizontally()) {
@@ -69,6 +69,7 @@ public class TesterRunigram {
                 System.out.println("FAILED");
             }
         }
+    }
 
 
         // Color[][] img = Runigram.scaled(safeRead("eyes.ppm"), 241, 209);
@@ -76,7 +77,7 @@ public class TesterRunigram {
         // int a = 2;
         // savePPM("blend_021.ppm", img);
         
-    }
+    
 
     /**
      * A tested function for the Runigram.read function.
@@ -142,11 +143,12 @@ public class TesterRunigram {
         }
         return compareImages(flipped, res);
     }
+    
 
-    /**
+        /**
      * A tested function for the Runigram.grayScaled function.
      */
-    public static boolean testGrayScaled() {
+        public static boolean testGrayScaled() {
         Color[][] flipped = Runigram.grayScaled(safeRead("xmen.ppm"));
         Color[][] res = safeRead("expected_results/xmen_gray.ppm");
         
@@ -163,12 +165,12 @@ public class TesterRunigram {
             return false;
         }
         return res1 && compareImages(flipped, res);
-    }
+        }
 
     /**
      * A tested function for the Runigram.scaled function.
      */
-    public static boolean testScaled() {
+        public static boolean testScaled() {
         Color[][] flipped = Runigram.scaled(safeRead("ironman.ppm"), 100, 150);
         Color[][] res = safeRead("expected_results/ironman_100_150.ppm");
         
@@ -185,12 +187,12 @@ public class TesterRunigram {
             return false;
         }
         return res1 && compareImages(flipped, res);
-    }
+     }
 
     /**
      * A tested function for the Runigram.blend function.
      */
-    public static boolean testBlend() {
+     public static boolean testBlend() {
         Color[][] img1 = safeRead("escher.ppm");
         Color[][] img2 = safeRead("eyes.ppm");
 
@@ -236,8 +238,8 @@ public class TesterRunigram {
         boolean res5 = compareImages(blended, res);
         
         return res1 && res2 && res3 && res4 && res5;
-    }
-
+     }
+    
 
     // ========================================== Helper functions ===========================================
 
@@ -297,6 +299,7 @@ public class TesterRunigram {
 
     
 }
+
 
 
 
